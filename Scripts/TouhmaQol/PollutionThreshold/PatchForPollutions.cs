@@ -2,26 +2,22 @@
 {
 
     using System;
-    using System.Collections.Generic;
     using System.IO;
     using BepInEx;
     using BepInEx.Logging;
-    using EraStarRequirements;
-    using EraStarRequirements.Models;
     using FullSerializer;
     using HarmonyLib;
-    using Scripts.TouhmaQol.PollutionThreshold;
     using Scripts.TouhmaQol.PollutionThreshold.Models;
 
     [BepInPlugin("humankind.touhma.qol-pollutionThreshold", "Humankind Pollution QOL Plug-In", "1.0.0.0")]
     public class PatchForPollutions : BaseUnityPlugin
     
     {
-        public new static ManualLogSource logger;    
+        public static ManualLogSource logger;    
         public static readonly string DATA_DIR = Path.Combine(Paths.ConfigPath, "Humankind Pollution");
         
-        public static readonly string FILE_SPEED_BUDGET_NAME = Path.Combine(Paths.ConfigPath, "GameSpeedPollutionBudget.json");
-        public static readonly string FILE_WORLD_FACTOR_NAME = Path.Combine(Paths.ConfigPath, "WorldSizePollutionFactors.json");
+        public static readonly string FILE_SPEED_BUDGET_NAME = Path.Combine(DATA_DIR, "GameSpeedPollutionBudget.json");
+        public static readonly string FILE_WORLD_FACTOR_NAME = Path.Combine(DATA_DIR, "WorldSizePollutionFactors.json");
         
         internal void Awake() {
            
@@ -31,10 +27,7 @@
             logger = new ManualLogSource("qol-pollutionThreshold");
             BepInEx.Logging.Logger.Sources.Add(logger);
             logger.Log(LogLevel.Warning, "CreateAndPatchAll");
-          //  Harmony.CreateAndPatchAll(typeof(PatchOnPollutionDefinition));
-            Harmony.CreateAndPatchAll(typeof(PatchOnGameSpeedDefinition));
             Harmony.CreateAndPatchAll(typeof(PatchOnPollutionManager));
-            Harmony.CreateAndPatchAll(typeof(PatchOnGameSpeedController));
             
             if (!Directory.Exists(DATA_DIR)) { Directory.CreateDirectory(DATA_DIR); }
 
