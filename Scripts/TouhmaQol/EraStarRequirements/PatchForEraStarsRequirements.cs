@@ -12,7 +12,7 @@
     {
         public new static ManualLogSource logger;    
         public static readonly string DATA_DIR = Path.Combine(Paths.ConfigPath, "Humankind EraStars");
-        public static readonly string FILE_NAME = Path.Combine(Paths.ConfigPath, "EraStarsRequiredByEra.json");
+        public static readonly string FILE_NAME = Path.Combine(DATA_DIR, "EraStarsRequiredByEra.json");
         
         
         internal void Awake() {

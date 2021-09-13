@@ -6,8 +6,8 @@
     {
         public static Dictionary<EraIndexModel, int> starsRequired = new Dictionary<EraIndexModel, int>()
         {
-            {Neolithic, 2},
-            {Ancient, 12},
+            {Neolithic, 1},
+            {Ancient, 7},
             {Classical, 7},
             {Medieval, 7},
             {Modern, 7},
