@@ -2,7 +2,7 @@
 {
     public class GameSpeedDefinitionValues
     {
-        public float gameSpeedMultiplier;
+        public float turnLimitMultiplier;
         public float productionCostMultiplier;
         public float moneyInstantCostMultiplier;
         public float influenceInstantCostMultiplier;

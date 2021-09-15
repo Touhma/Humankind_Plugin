@@ -26,6 +26,7 @@
             BepInEx.Logging.Logger.Sources.Add(logger);
             logger.Log(LogLevel.Warning, "CreateAndPatchAll");
             Harmony.CreateAndPatchAll(typeof(PatchOnGameSpeedDefinition));
+            Harmony.CreateAndPatchAll(typeof(PatchOnGameSpeedController));
             
             if (!Directory.Exists(DATA_DIR)) { Directory.CreateDirectory(DATA_DIR); }
 

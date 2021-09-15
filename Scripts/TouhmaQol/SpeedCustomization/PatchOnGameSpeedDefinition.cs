@@ -1,5 +1,6 @@
 ﻿namespace Humankind_Mod.PatchTest
 {
+    using Amplitude;
     using Amplitude.Mercury.Data.Simulation;
     using HarmonyLib;
     using Models;
@@ -12,25 +13,37 @@
         [HarmonyPatch("Initialize")]
         public static void Initialize(ref GameSpeedDefinition __instance)
         {
-            //Patch.logger.Log(LogLevel.Warning, "Vanilla DefaultGameSpeedMultiplier : " + __instance.DefaultGameSpeedMultiplier);
 
-            __instance.DefaultGameSpeedMultiplier /= __instance.DefaultGameSpeedMultiplier;
-            __instance.DefaultGameSpeedMultiplier *= SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].gameSpeedMultiplier;
+            Patch.logger.Log(LogLevel.Warning, "Vanilla EndGameTurnLimitMultiplier : " + __instance.EndGameTurnLimitMultiplier);
+            __instance.EndGameTurnLimitMultiplier = SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].turnLimitMultiplier;
+            Patch.logger.Log(LogLevel.Warning, "Reworked EndGameTurnLimitMultiplier : " + __instance.EndGameTurnLimitMultiplier);
             
-            __instance.ProductionCostMultiplier /= __instance.ProductionCostMultiplier;
-            __instance.ProductionCostMultiplier *= SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].productionCostMultiplier;
+            Patch.logger.Log(LogLevel.Warning, "Vanilla ProductionCostMultiplier : " + __instance.ProductionCostMultiplier);
+            __instance.ProductionCostMultiplier = ReplaceValue(SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].productionCostMultiplier);
+            Patch.logger.Log(LogLevel.Warning, "Reworked ProductionCostMultiplier : " + __instance.ProductionCostMultiplier);
 
-            __instance.MoneyInstantCostMultiplier /= __instance.MoneyInstantCostMultiplier;
-            __instance.MoneyInstantCostMultiplier *= SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].moneyInstantCostMultiplier;
+            Patch.logger.Log(LogLevel.Warning, "Vanilla MoneyInstantCostMultiplier : " + __instance.MoneyInstantCostMultiplier);
+            __instance.MoneyInstantCostMultiplier = ReplaceValue(SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].moneyInstantCostMultiplier);
+            Patch.logger.Log(LogLevel.Warning, "Reworked MoneyInstantCostMultiplier : " + __instance.MoneyInstantCostMultiplier);
 
-            __instance.InfluenceInstantCostMultiplier /= __instance.InfluenceInstantCostMultiplier;
-            __instance.InfluenceInstantCostMultiplier *= SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].influenceInstantCostMultiplier;
+            Patch.logger.Log(LogLevel.Warning, "Vanilla InfluenceInstantCostMultiplier : " + __instance.InfluenceInstantCostMultiplier);
+            __instance.InfluenceInstantCostMultiplier = ReplaceValue(SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].influenceInstantCostMultiplier);
+            Patch.logger.Log(LogLevel.Warning, "Reworked InfluenceInstantCostMultiplier : " + __instance.InfluenceInstantCostMultiplier);
 
-            __instance.PopulationInstantCostMultiplier /= __instance.PopulationInstantCostMultiplier;
-            __instance.PopulationInstantCostMultiplier *= SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].populationInstantCostMultiplier;
+            Patch.logger.Log(LogLevel.Warning, "Vanilla PopulationInstantCostMultiplier : " + __instance.PopulationInstantCostMultiplier);
+            __instance.PopulationInstantCostMultiplier = ReplaceValue(SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].populationInstantCostMultiplier);
+            Patch.logger.Log(LogLevel.Warning, "Reworked PopulationInstantCostMultiplier : " + __instance.PopulationInstantCostMultiplier);
 
-            __instance.TechnologyCostMultiplier /= __instance.TechnologyCostMultiplier;
-            __instance.TechnologyCostMultiplier *= SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].technologyCostMultiplier;
+            Patch.logger.Log(LogLevel.Warning, "Vanilla TechnologyCostMultiplier : " + __instance.TechnologyCostMultiplier);
+            __instance.TechnologyCostMultiplier= ReplaceValue(SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].technologyCostMultiplier);
+            Patch.logger.Log(LogLevel.Warning, "Reworked TechnologyCostMultiplier : " + __instance.TechnologyCostMultiplier);
+        }
+
+        private static FixedPoint ReplaceValue(float ratio)
+        {
+            FixedPoint result = 1;
+            result *= ratio;
+            return result;
         }
     }
 }

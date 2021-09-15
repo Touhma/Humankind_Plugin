@@ -9,7 +9,7 @@
             {
                 GameSpeed.Blitz, new GameSpeedDefinitionValues()
                 {
-                    gameSpeedMultiplier = 0.25f
+                    turnLimitMultiplier = 0.25f
                     , productionCostMultiplier = 0.25f
                     , moneyInstantCostMultiplier = 0.25f
                     , influenceInstantCostMultiplier = 0.25f
@@ -21,7 +21,7 @@
             {
                 GameSpeed.Fast, new GameSpeedDefinitionValues()
                 {
-                    gameSpeedMultiplier = 0.5f
+                    turnLimitMultiplier = 0.5f
                     , productionCostMultiplier = 0.5f
                     , moneyInstantCostMultiplier = 0.5f
                     , influenceInstantCostMultiplier = 0.5f
@@ -33,7 +33,7 @@
             {
                 GameSpeed.Normal, new GameSpeedDefinitionValues()
                 {
-                    gameSpeedMultiplier = 1f
+                    turnLimitMultiplier = 1f
                     , productionCostMultiplier = 1f
                     , moneyInstantCostMultiplier = 1f
                     , influenceInstantCostMultiplier = 1f
@@ -45,7 +45,7 @@
             {
                 GameSpeed.Slow, new GameSpeedDefinitionValues()
                 {
-                    gameSpeedMultiplier = 1.5f
+                    turnLimitMultiplier = 1.5f
                     , productionCostMultiplier = 1.5f
                     , moneyInstantCostMultiplier = 1.5f
                     , influenceInstantCostMultiplier = 1.5f
@@ -57,7 +57,7 @@
             {
                 GameSpeed.Endless, new GameSpeedDefinitionValues()
                 {
-                    gameSpeedMultiplier = 2f
+                    turnLimitMultiplier = 2f
                     , productionCostMultiplier = 2f
                     , moneyInstantCostMultiplier = 2f
                     , influenceInstantCostMultiplier = 2f
