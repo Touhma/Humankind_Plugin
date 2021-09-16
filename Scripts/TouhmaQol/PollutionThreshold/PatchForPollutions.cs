@@ -5,6 +5,7 @@
     using System.IO;
     using BepInEx;
     using BepInEx.Logging;
+    using EraStarRequirements;
     using FullSerializer;
     using HarmonyLib;
     using Scripts.TouhmaQol.PollutionThreshold.Models;
@@ -28,6 +29,7 @@
             BepInEx.Logging.Logger.Sources.Add(logger);
             logger.Log(LogLevel.Warning, "CreateAndPatchAll");
             Harmony.CreateAndPatchAll(typeof(PatchOnPollutionManager));
+            //Harmony.CreateAndPatchAll(typeof(PatchOnPollutionDefinition));
             
             if (!Directory.Exists(DATA_DIR)) { Directory.CreateDirectory(DATA_DIR); }
 

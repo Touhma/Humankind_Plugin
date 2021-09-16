@@ -1,11 +1,10 @@
 ﻿namespace Humankind_Mod.PatchTest
 {
     using Amplitude;
-    using Amplitude.Framework.Simulation;
     using Amplitude.Mercury.Data.Simulation;
-    using Amplitude.Mercury.Game;
     using Amplitude.Mercury.Simulation;
     using HarmonyLib;
+    using Scripts.Commons.Models;
     using Scripts.TouhmaQol.PollutionThreshold.Models;
     using LogLevel = BepInEx.Logging.LogLevel;
 
@@ -31,28 +30,8 @@
         public static bool GetEndGamePollutionThreshold(ref PollutionManager __instance, ref WorldAtmosphere ___WorldAtmosphere, ref PollutionDefinition ___PollutionDefinition, ref FixedPoint __result)
         {
             PatchForPollutions.logger.Log(LogLevel.Warning, "Vanilla Value : " + ___PollutionDefinition.EndGamePollutionThreshold);
-
-            if (___PollutionDefinition.EndGamePollutionThreshold * 1 == 5000)
-            {
-                __result = GetPollutionThresholdValueReworked(GameSpeed.Blitz);
-            }
-            else if (___PollutionDefinition.EndGamePollutionThreshold * 1 == 10000)
-            {
-                __result = GetPollutionThresholdValueReworked(GameSpeed.Fast);
-            }
-            else if (___PollutionDefinition.EndGamePollutionThreshold * 1 == 20000)
-            {
-                __result = GetPollutionThresholdValueReworked(GameSpeed.Normal);
-            }
-            else if (___PollutionDefinition.EndGamePollutionThreshold * 1 == 30000)
-            {
-                __result = GetPollutionThresholdValueReworked(GameSpeed.Slow);
-            }
-            else if (___PollutionDefinition.EndGamePollutionThreshold * 1 == 40000)
-            {
-                __result = GetPollutionThresholdValueReworked(GameSpeed.Endless);
-            }
-
+            __result = GetPollutionThresholdValueReworked(VanillaPollutionVariables.gameSpeedPollutionThresholds[(int)___PollutionDefinition.EndGamePollutionThreshold *1]);
+            
            // PatchForPollutions.logger.Log(LogLevel.Warning, "Vanilla GetPollutionWorldFactorReworked : " + ___WorldAtmosphere.WorldSizeFactor.Value);
 
             if (___WorldAtmosphere.WorldSizeFactor.Value.ToString() == "0.40")
@@ -97,9 +76,7 @@
         private static void GetPollutionOptions(WorldAtmosphere worldAtmosphere, PollutionDefinition pollutionDefinition)
         {
             PatchForPollutions.logger.Log(LogLevel.Warning, "Pollution PollutionNet " + worldAtmosphere.PollutionNet.Value);
-            PatchForPollutions.logger.Log(LogLevel.Warning, "Pollution WorldSizeFactor " + worldAtmosphere.WorldSizeFactor.Value);
-            PatchForPollutions.logger.Log(LogLevel.Warning, "Pollution pollutionDefinition " + pollutionDefinition.EndGamePollutionThreshold);
-            PatchForPollutions.logger.Log(LogLevel.Warning, "Pollution pollutionDefinition EndGamePollutionThreshold" + pollutionDefinition.EndGamePollutionThreshold * worldAtmosphere.WorldSizeFactor.Value);
+            PatchForPollutions.logger.Log(LogLevel.Warning, "Vanilla PollutionDefinition " + pollutionDefinition.EndGamePollutionThreshold); 
         }
     }
 }

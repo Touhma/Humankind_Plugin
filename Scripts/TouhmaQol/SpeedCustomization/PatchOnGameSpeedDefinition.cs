@@ -13,11 +13,6 @@
         [HarmonyPatch("Initialize")]
         public static void Initialize(ref GameSpeedDefinition __instance)
         {
-
-            Patch.logger.Log(LogLevel.Warning, "Vanilla EndGameTurnLimitMultiplier : " + __instance.EndGameTurnLimitMultiplier);
-            __instance.EndGameTurnLimitMultiplier = SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].turnLimitMultiplier;
-            Patch.logger.Log(LogLevel.Warning, "Reworked EndGameTurnLimitMultiplier : " + __instance.EndGameTurnLimitMultiplier);
-            
             Patch.logger.Log(LogLevel.Warning, "Vanilla ProductionCostMultiplier : " + __instance.ProductionCostMultiplier);
             __instance.ProductionCostMultiplier = ReplaceValue(SpeedValues.gameSpeedValues[VanillaSpeedValues.gameSpeedValues[(float) __instance.DefaultGameSpeedMultiplier * 1]].productionCostMultiplier);
             Patch.logger.Log(LogLevel.Warning, "Reworked ProductionCostMultiplier : " + __instance.ProductionCostMultiplier);

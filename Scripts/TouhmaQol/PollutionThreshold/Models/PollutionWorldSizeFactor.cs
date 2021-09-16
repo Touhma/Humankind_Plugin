@@ -1,7 +1,6 @@
 ﻿namespace Humankind_Mod.Scripts.TouhmaQol.PollutionThreshold.Models
 {
     using System.Collections.Generic;
-    using PatchTest.EraStarRequirements.Models;
     public static class PollutionWorldSizeFactor
     {
         public static Dictionary<WorldSize, float> worldSizeFactor = new Dictionary<WorldSize, float>()

@@ -15,32 +15,35 @@
       <Reference Include="0Harmony, Version=2.5.4.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
         <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\BepInEx\core\0Harmony.dll</HintPath>
       </Reference>
-      <Reference Include="Amplitude, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Amplitude.dll</HintPath>
+      <Reference Include="Amplitude, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="Amplitude.AI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Amplitude.AI.dll</HintPath>
+      <Reference Include="Amplitude.AI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude.AI_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="Amplitude.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Amplitude.Core.dll</HintPath>
+      <Reference Include="Amplitude.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude.Core_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="Amplitude.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Amplitude.Framework.dll</HintPath>
+      <Reference Include="Amplitude.Framework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude.Framework_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="Amplitude.Mercury.AI.Brain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Amplitude.Mercury.AI.Brain.dll</HintPath>
+      <Reference Include="Amplitude.Mercury.AI.Brain, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude.Mercury.AI.Brain_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="Amplitude.Mercury.Data, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Amplitude.Mercury.Data.dll</HintPath>
+      <Reference Include="Amplitude.Mercury.Animation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude.Mercury.Animation_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="Amplitude.Mercury.Firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Amplitude.Mercury.Firstpass.dll</HintPath>
+      <Reference Include="Amplitude.Mercury.Data, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude.Mercury.Data_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="Amplitude.UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Amplitude.UI.dll</HintPath>
+      <Reference Include="Amplitude.Mercury.Firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude.Mercury.Firstpass_publicized.dll</HintPath>
       </Reference>
-      <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
-        <HintPath>Libs\publicized_assemblies\Assembly-CSharp.dll</HintPath>
+      <Reference Include="Amplitude.UI, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Amplitude.UI_publicized.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>Libs\publicized_assemblies\1.3.248\Assembly-CSharp_publicized.dll</HintPath>
       </Reference>
       <Reference Include="BepInEx, Version=5.4.15.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
         <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\BepInEx\core\BepInEx.dll</HintPath>
