@@ -9,6 +9,7 @@
       <Folder Include="Properties" />
       <Folder Include="Scripts\3rdParty" />
       <Folder Include="Scripts\Assets" />
+      <Folder Include="Scripts\TouhmaQol\EndGameCustomization\Models" />
     </ItemGroup>
 
     <ItemGroup>
@@ -56,6 +57,24 @@
       </Reference>
       <Reference Include="Mono.Cecil, Version=0.10.4.0, Culture=neutral, PublicKeyToken=50cebf1cceb9d05e, processorArchitecture=MSIL">
         <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\BepInEx\core\Mono.Cecil.dll</HintPath>
+      </Reference>
+      <Reference Include="Sirenix.OdinInspector.Attributes, Version=3.0.3.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\Humankind_Data\Managed\Sirenix.OdinInspector.Attributes.dll</HintPath>
+      </Reference>
+      <Reference Include="Sirenix.OdinInspector.CompatibilityLayer, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\Humankind_Data\Managed\Sirenix.OdinInspector.CompatibilityLayer.dll</HintPath>
+      </Reference>
+      <Reference Include="Sirenix.Serialization, Version=3.0.3.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\Humankind_Data\Managed\Sirenix.Serialization.dll</HintPath>
+      </Reference>
+      <Reference Include="Sirenix.Serialization.AOTGenerated, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\Humankind_Data\Managed\Sirenix.Serialization.AOTGenerated.dll</HintPath>
+      </Reference>
+      <Reference Include="Sirenix.Serialization.Config, Version=3.0.3.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\Humankind_Data\Managed\Sirenix.Serialization.Config.dll</HintPath>
+      </Reference>
+      <Reference Include="Sirenix.Utilities, Version=3.0.3.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\Humankind_Data\Managed\Sirenix.Utilities.dll</HintPath>
       </Reference>
       <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
         <HintPath>E:\Gaming\SteamLibrary\steamapps\common\Humankind\Humankind_Data\Managed\System.dll</HintPath>
